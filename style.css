@@ -1276,4 +1276,8 @@ hr {
         margin: 0 auto;
 }
 
+.video{
+    width: 320px;
+}
+
 }
