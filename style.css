@@ -1,0 +1,1221 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url("./images/BG.png");
+    background-repeat: repeat-y;
+    background-size: 120%;
+    font-family: Quantico;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.nav{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    /* position: fixed; */
+    opacity: 0;
+    animation: slideRight 1.5s ease-in-out forwards;
+}
+
+@keyframes slideRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.nav li{
+    list-style-type: none;
+    display: inline;
+    margin-left: 60px;
+}
+
+.nav li :hover{
+    color: #BD1984;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0 0 4px #9f24afc3,0 0 4px #BD1984,0 0 3px #bd19846f,0 0 10px #eb56b7a5;
+}
+
+.nav li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+.nav-botton{
+    display: flex;
+    width: 100%;
+    padding-left: 45%;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: -10px 0 10px Orgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.sidebar li{
+    list-style-type: none;
+    line-height: 40px;
+    margin-top: 40px;
+}
+
+.sidebar ul{
+    height: 200px;
+}
+
+.sidebar a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 4px;
+}
+
+.sidebar li :hover{
+    color: #BD1984;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0 0 8px #eaeaea79,0 0 8px #BD1984,0 0 3px #bd19846f,0 0 20px #eb56b7a5;
+}
+
+.logo{
+    width: 40px;
+    height: 30px;
+    margin-right: 40%;
+    /* width: 5%; */
+    /* animation-duration: .4s;
+    animation-name: shake; */
+}
+/* @keyframes shake {
+    30% { rotate: 25deg; }
+    60% { rotate: -25deg; }
+} */
+
+.social{
+    display: flex;
+    justify-content: right;
+    width: 35%;
+    transition: .5s;
+    /* width: 20%; */
+}
+
+.social a :hover{
+    transform: translateY(-10px);
+}
+
+.ig{
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.fb{
+    width: 40px;
+    height: 40px;
+}
+
+.menu{
+    text-align: right;
+    display: none;
+}
+
+.X_btn{
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+}
+
+.goup{
+    position: fixed;
+    width: 40px;
+    bottom: 100px; 
+    right: 40px;
+}
+
+.meau button{
+    width: 100%;
+    background: #ea73ff;
+    position: absolute;
+    z-index: 999;
+}
+
+.banner-pic{
+    width: 100%;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    50%{
+        opacity: .5;
+        transform: scale(1.2);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.midtitle{
+    width: 100%;
+    font-size: 48px;
+    margin-top: 100px;
+    text-align: center;
+    letter-spacing: 10px;
+    color: #BD1984;
+    animation: zommBounce 1.5s ease-in-out;
+    /* text-shadow: 0 0 8px #BD1984,0 0 8px #BD1984,0 0 2px #bd1984bd,0 0 48px #eb56b7a5; */
+}
+
+.midtitle-works{
+    font-size: 48px;
+    margin-top: 100px;
+    text-align: center;
+    letter-spacing: 10px;
+    color: #BD1984;
+}
+
+.midtitle-other3d{
+    width: 100%;
+    font-size: 36px;
+    margin-top: 100px;
+    text-align: center;
+    letter-spacing: 10px;
+    color: #22c0d1;
+}
+
+.midtitle-otherui{
+    width: 100%;
+    font-size: 48px;
+    margin-top: 100px;
+    text-align: center;
+    letter-spacing: 10px;
+    color: #22c0d1;
+}
+
+.self{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.self-pic{
+    opacity: 0;
+    animation: zommBounce 2s ease-in-out forwards;
+    animation-delay: .8s;
+}
+
+@keyframes zommBounce{
+    0%{
+        opacity: 0;
+        transform: scale(0.5) rotate(-40deg);
+    }
+    50%{
+        transform: scale(1.1) rotate(0deg);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.self-text{
+    display: grid;
+    height: 100px;
+    line-height: 34px;
+    color: white;
+    margin-left: 120px;
+    /* padding-top: 70px; */
+    font-weight: lighter;
+    opacity: 0;
+    animation: zommBounce 2s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.self-text h2{
+    font-size: 38px;
+    letter-spacing: 8px;
+}
+
+.self-text h5{
+    letter-spacing: 1.5px;
+    margin-top: -20px;
+}
+
+.self-text p{
+    font-size: 16px;
+}
+
+.work-pic{
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    justify-content: center;
+    gap: 40px;
+    animation: works 1.5s ease-in-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+@keyframes works{
+    0%{
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.work-pic a :hover{
+    scale: 1.1;
+}
+
+/* .work-pic-1{
+    margin-top: 30px;
+}
+
+.work-pic-2{
+    margin-top: 30px;
+} */
+
+.footer{
+    background: rgba(255, 255, 255, 0.058);
+    width: 100%;
+    /* height: 60px; */
+    margin-top: 80px;
+    text-align: center;
+    color: #BD1984;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 60px;
+    display: flex;
+    justify-content: center; 
+    position: relative;
+}
+
+.footer p{
+    font-size: 24px;
+}
+
+.footer-social {
+    display: none;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+}
+
+.banner-about{
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.banner-about-text{
+    margin-top: 130px;
+    margin-left: 50px;
+    opacity: 0;
+    animation: zommBounce 2s ease-in-out forwards;
+    animation-delay: .8s;
+}
+
+.name{
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    justify-content: center;
+}
+
+.name-chinese {
+    font-size: 3em; 
+    font-weight: bold;
+}
+
+.name-english { 
+    /* font-size: 1.5em;  */
+    margin-top: 10px;
+    margin-left: 20px;
+    vertical-align: bottom;
+}
+
+.university {
+    font-size: 1.2em; 
+    margin-top: 20px;
+    letter-spacing: 18px;
+    margin-left: 20px;
+}
+
+.content{
+    width: 50%;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    line-height: 28px;
+    margin: 0 auto;
+    animation: works 1.5s ease-in-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.content-title{
+    border-bottom: 2px dashed #BD1984;;
+    width: 58px;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    font-size: 24px;
+    margin-top: 40px;
+}
+
+.content1{
+    border-bottom: 2px solid #BD1984;
+    padding-bottom: 10px;
+}
+
+.content2{
+    border-bottom: 2px solid #BD1984;
+    padding-bottom: 10px;
+}
+
+.content3{
+    border-bottom: 2px solid #BD1984;
+    padding-bottom: 10px;
+}
+
+.content4{
+    border-bottom: 2px solid #BD1984;
+    padding-bottom: 10px;
+    margin-bottom: 70px;
+}
+
+.goto-works{
+    width: 80px;
+    border-radius: 16px;
+    background: #BD1984;;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+} 
+
+.goto-works a{
+    text-decoration: none;
+    color: white;
+}
+
+.goto-works:hover{
+    background: #bd1984b5;
+}
+
+.ui-banner{
+    text-align: center;
+    /* animation: fadeIn .5s ease-in-out; */
+    animation: zommBounce 1.5s ease-in-out;
+}
+
+.ui-banner1{
+    width: 50%;
+}
+
+.beauty{
+    width: 70%;
+    margin: 0 auto;
+    animation: works 1.5s ease-in-out;
+}
+
+.beauty-title{
+    color: white;
+    font-size: 40px;
+}
+
+.beauty-intro{
+    color: white;
+    line-height: 24px;
+}
+
+.challenge{
+    color: white;
+}
+
+.challenge1{
+    margin-bottom: 80px;
+}
+
+.challenge2{
+    margin-bottom: 80px;
+}
+
+.challenge3{
+    margin-bottom: 80px;
+}
+
+.challenge-title1{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.challenge-text1{
+    margin-left: 60px;
+    line-height: 28px;
+}
+
+.challenge-text11{
+    line-height: 28px;
+}
+
+.challenge-title2{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.challenge-text2{
+    line-height: 24px;
+}
+
+.challenge-title3{
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.challenge-text3{
+    line-height: 24px;
+}
+
+.beauty-gif{
+    text-align: center;
+}
+
+.beauty-gif img{
+    height: 40%;
+}
+
+.hey{
+    width: 70%;
+    margin: 0 auto;
+    animation: works 1.5s ease-in-out;
+}
+
+.hey-title{
+    color: white;
+    font-size: 40px;
+}
+
+.hey-intro{
+    color: white;
+    line-height: 24px;
+}
+
+.musound{
+    width: 80%;
+    margin: 0 auto;
+    animation: works 1.5s ease-in-out;
+}
+
+.musound-title{
+    color: white;
+    font-size: 40px;
+}
+
+.musound-intro{
+    color: white;
+    line-height: 24px;
+}
+
+.d-banner{
+    text-align: center;
+}
+
+.d-banner1{
+    height: 480px;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn .5s ease-in-out forwards;
+}
+
+.ruin{
+    width: 70%;
+    margin: 0 auto;
+    animation: works 1.5s ease-in-out forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.ruin-title{
+    color: white;
+    font-size: 40px;
+}
+
+.ruin-intro{
+    color: white;
+    line-height: 24px;
+}
+
+.challenge-text{
+    line-height: 28px;
+}
+
+.sci-banner{
+    text-align: center;
+}
+
+.sci-banner1{
+    height: 480px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.back{
+    margin-top: 40px;
+    width: 40%;
+    border-radius: 16px;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.back a{
+    border-radius:16px ;
+    text-decoration: none;
+    color: #BD1984;
+}
+
+.back :hover{
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0 0 8px #eaeaea79,0 0 8px #c2c2c2,0 0 3px #bd19846f,0 0 20px #826076a5;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    padding: 10px;
+    margin: 0 auto;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+   .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 20px; /* 設定格與格之間的間距為 8px */
+      width: 100%;   /* 可依需求調整寬度 */
+      margin-bottom: 60px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover; /* 讓圖片不變形填滿格子 */
+      display: block;
+    }
+
+    .card-list{
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+    }
+
+    .card{
+        width: 220px;
+        /* height: 200px; */
+        border-width: 1px;
+        border-style: solid;
+        border-color: #f7cbff96;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        background-color: #d9d6ff27;
+        padding: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+}
+
+hr {
+  border: none;          /* 移除預設邊框 */
+  border-top: 3px solid #BD1984; /* 自訂上邊框作為分隔線 */
+  width: 100%;
+  margin: 20px auto;     /* 上下間距並置中 */
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #dc43ff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.download-btn:hover {
+  background: #1e6bb8;
+}
+
+.about-btn{
+    display: flex;
+    margin-right: 20px;
+    gap: 20px;
+}
+
+
+
+@media(max-width:1200px){
+    /* .nav{
+        margin-top: 40px;
+    } */
+
+    .nav-botton{
+        width: 0px;
+        opacity: 0;
+        display: none;
+    }
+
+    .social{
+        opacity: 0;
+        display: none;
+    }
+
+    .menu{
+        display: block;
+        margin-left: auto
+    }
+
+    .self{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .self-text{
+        width: 100%;
+        margin: 0 auto;
+        /* margin-top: -40px; */
+    }
+
+    .self-pic{
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        text-align: center;
+        justify-items: center;
+    }
+
+     .self-text p{
+        height: 20px;
+        text-align: left;
+    } 
+
+    .self-text h2{
+        text-align: center;
+    }
+
+    .self-text h5{
+        text-align: center;
+    }
+
+    .midtitle-works{
+        font-size: 40px;
+        margin-top: 280px;
+        /* margin-top: 200px; */
+    }
+
+    .work-pic{
+        /* display: block; */
+        /* gap: 20px; */
+        text-align: center;
+    }
+
+    .work-pic img{
+        scale: 0.8;
+    }
+
+    .work-pic-1{
+        height: 350px;
+    }
+
+    .work-pic a :hover{
+        scale: .9 ;
+    }
+
+    /* .work-pic-1 :hover{
+        scale: .8;
+    }
+    
+    .work-pic-2 :hover{
+        scale: .8;
+    } */
+
+    .menu{
+        opacity: 100;
+    }
+
+    /* .work-pic img{
+        width: 160px;
+    } */
+
+    .banner-about{
+        display: block;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .banner-about-text{
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    .name-chinese {
+        font-size: 2em; 
+        font-weight: bold;
+    }
+    
+    .name-english { 
+        font-size: 14px;
+    }
+    
+    .university {
+        font-size: 16px; 
+        letter-spacing: 4px;
+        margin-left: 0px;
+    }
+
+    .content{
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .content-title{
+        width: 54px;
+        font-size: 20px;
+    }
+    
+    .goto-works{
+        display: flex;
+        font-size: 20px;
+    } 
+
+    .ui-banner1{
+        width: 100%;
+    }
+
+    .beauty{
+        width: 100%;
+    }
+    
+    .beauty-title{
+        font-size: 28px;
+    }
+    
+    .beauty-intro{
+        color: white;
+        line-height: 24px;
+    }
+
+    .challenge-title1{
+        font-size: 22px;
+    }
+    
+    .challenge-title2{
+        font-size: 22px;
+    }
+    
+    .challenge-title3{
+        font-size: 22px;
+    }
+    
+    .beauty-gif{
+        text-align: center;
+        height: 10%;
+    }
+
+    /* .beauty-gif img{
+        width: 70%;
+    } */
+
+    .back{
+        width: 60%;
+    }
+
+    .hey{
+        width: 100%;
+    }
+
+    .hey-title{
+        font-size: 28px;
+    }
+
+    .hey-intro{
+        line-height: 24px;
+    }
+
+    .musound{
+        width: 100%;
+    }
+
+    .musound-title{
+        font-size: 28px;
+    }
+
+    .musound-intro{
+        line-height: 24px;
+    }
+
+    .d-banner1{
+        height: 500px;
+    }
+
+    .ruin{
+        width: 100%;
+    }
+
+    .ruin-title{
+        font-size: 28px;
+    }
+
+    .ruin-intro{
+        line-height: 28px;
+        font-size: 16px;
+    }
+
+    .midtitle-other3d{
+        font-size: 30px;
+        letter-spacing: 4px;
+        color: #22c0d1;
+    }
+
+    .midtitle-otherui{
+        font-size: 30px;
+        letter-spacing: 4px;
+        color: #22c0d1;
+    }
+
+    .sci-banner1{
+        width: 100%;
+    }
+
+    .beauty-gif img{
+        width: 30%;
+    }
+
+    .footer-social {
+        display: flex;
+    }
+}        
+
+@media(max-width:576px){
+    /* .nav{
+        margin-top: 40px;
+    } */
+
+    .nav-botton{
+        width: 0px;
+        opacity: 0;
+        display: none;
+    }
+
+    .social{
+        opacity: 0;
+        display: none;
+    }
+
+    .menu{
+        display: block;
+        margin-left: auto
+    }
+    
+
+    .midtitle{
+        font-size: 40px;
+    }
+
+    .self{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .self-text{
+        width: 100%;
+        margin: 0 auto;
+        /* margin-top: -40px; */
+    }
+
+    .self-pic{
+        width: 40%;
+        height: 40%; 
+        margin: 0 auto; 
+        text-align: center; 
+        justify-items: center;
+    }
+
+     .self-text p{
+        height: 20px;
+        text-align: left;
+    } 
+
+    .self-text h2{
+        text-align: center;
+    }
+
+    .self-text h5{
+        text-align: center;
+    }
+
+    .midtitle-works{
+        font-size: 40px;
+        margin-top: 280px;
+        /* margin-top: 200px; */
+    }
+
+    .work-pic{
+        display: block;
+        text-align: center;
+    }
+
+    .work-pic img{
+        margin-top: 22px;
+    }
+
+    /* .work-pic-1{ */
+        /* height: 350px; */
+    /* } */
+
+    /* .work-pic-1 :hover{
+        scale: .9;
+    }
+    
+    .work-pic-2 :hover{
+        scale: .9;
+    } */
+
+    .menu{
+        opacity: 100;
+    }
+
+    .banner-about{
+        display: block;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .name{
+        width: 100%;
+    }
+
+    .banner-about-text{
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+
+    .name-chinese {
+        font-size: 2em; 
+        font-weight: bold;
+    }
+    
+    .name-english { 
+        font-size: 14px;
+    }
+    
+    .university {
+        font-size: 16px; 
+        letter-spacing: 4px;
+        margin-left: 0px;
+    }
+
+    .content{
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .content-title{
+        width: 54px;
+        font-size: 20px;
+    }
+
+    .content1{
+        font-size: 12px;
+    }
+    
+    .content2{
+        font-size: 12px;
+    }
+    
+    .content3{
+        font-size: 12px;
+    }
+    
+    .content4{
+        font-size: 12px;
+    }
+    
+    .goto-works{
+        font-size: 20px;
+    } 
+
+    .ui-banner1{
+        width: 100%;
+    }
+
+    .beauty{
+        width: 100%;
+    }
+    
+    .beauty-title{
+        font-size: 28px;
+    }
+    
+    .beauty-intro{
+        color: white;
+        line-height: 24px;
+    }
+
+    .challenge-title1{
+        font-size: 22px;
+    }
+    
+    .challenge-title2{
+        font-size: 22px;
+    }
+    
+    .challenge-title3{
+        font-size: 22px;
+    }
+    
+    .beauty-gif{
+        text-align: center;
+    }
+
+    .beauty-gif img{
+        width: 70%;
+    }
+
+    .back{
+        width: 60%;
+    }
+
+    .hey{
+        width: 100%;
+    }
+
+    .hey-title{
+        font-size: 24px;
+    }
+
+    .hey-intro{
+        line-height: 24px;
+    }
+
+    .musound{
+        width: 100%;
+    }
+
+    .musound-title{
+        font-size: 28px;
+    }
+
+    .musound-intro{
+        line-height: 24px;
+    }
+
+    .d-banner1{
+        height: 500px;
+    }
+
+    .ruin{
+        width: 100%;
+    }
+
+    .ruin-title{
+        font-size: 28px;
+    }
+
+    .ruin-intro{
+        line-height: 28px;
+        font-size: 16px;
+    }
+
+    .midtitle-other3d{
+        font-size: 30px;
+        letter-spacing: 4px;
+        color: #22c0d1;
+    }
+
+    .midtitle-otherui{
+        font-size: 30px;
+        letter-spacing: 4px;
+        color: #22c0d1;
+    }
+
+    .footer-social {
+        display: flex;
+        width: 100px;
+    }
+
+    .footer a{
+        width: 70px;
+    }
+
+    .video{
+        width: 100px;
+    }
+}        
+
+@media(max-width:880px){
+    .work-pic{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+    }
+
+    .footer p{
+        font-size: 14px;
+    }
+
+    .beauty-title h1{
+        font-size: 32px;
+    }
+
+    .video{
+        width: 380px;
+    }
+    
+    
+}
+
