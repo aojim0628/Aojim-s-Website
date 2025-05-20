@@ -690,6 +690,7 @@ hr {
 }
 
 .download-btn {
+    width: 80px;
     display: inline-block;
     padding: 10px 24px;
     background: #dc43ff;
@@ -697,6 +698,7 @@ hr {
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
+    text-align: center;
 }
 
 .download-btn:hover {
@@ -706,7 +708,7 @@ hr {
 .about-btn {
     display: flex;
     margin-right: 20px;
-    gap: 20px;
+    gap: 30px;
 }
 
 
@@ -1253,7 +1255,9 @@ hr {
     }
 
     .download-btn{
+        width: 60px;
         font-size: 12px;
+        padding: 10px;
     }
 
 
