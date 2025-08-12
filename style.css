@@ -383,6 +383,7 @@ body {
     margin-top: 20px;
     letter-spacing: 18px;
     margin-left: 20px;
+    line-height: 32px;
 }
 
 .content {
@@ -685,8 +686,7 @@ hr {
     border-top: 3px solid #BD1984;
     /* 自訂上邊框作為分隔線 */
     width: 100%;
-    margin: 20px auto;
-    /* 上下間距並置中 */
+    margin-top: 60px;
 }
 
 .download-btn {
@@ -711,6 +711,21 @@ hr {
     gap: 30px;
 }
 
+.scenario{
+  text-align: center;
+}
+
+.scenario img{
+     max-width: 100%;  /* 圖片最大寬度不超過容器 */
+  height: auto;     /* 高度自動，保持比例 */
+  display: block;   /* 避免圖片下方空白 */
+  object-fit: contain; /* 保持圖片完整顯示 */
+}
+
+.chat{
+    text-align: center;
+    margin-top: 40px;
+}
 
 
 @media(max-width:1200px) {
@@ -832,6 +847,7 @@ hr {
         font-size: 16px;
         letter-spacing: 4px;
         margin-left: 0px;
+
     }
 
     .content {
@@ -1231,6 +1247,10 @@ hr {
 
     .video {
         width: 100px;
+    }
+
+    .scenario img{
+    max-width: 400px;
     }
 }
 
